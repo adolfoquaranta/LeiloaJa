@@ -1,0 +1,32 @@
+<h1>Lista de Leiloeiros</h1>
+
+<p *ngIf="!listaleiloeiros"><em>Carregando...</em></p>
+
+<p>
+  <a [routerLink]="['/cadastrar-leiloeiro']">Novo Usuário</a>
+</p>
+
+<table class='table' *ngIf="listaleiloeiros">
+  <thead>
+    <tr>
+      <th>Id Leiloeiro</th>
+      <th>Nome</th>
+      <th>Id Usuário</th>
+      <th>Usuário(Login)</th>
+      <th>Leiloes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let leiloeiro of listaleiloeiros">
+      <td>{{ leiloeiro.idleiloeiro }}</td>
+      <td>{{ leiloeiro.nome }}</td>
+      <td>{{ leiloeiro.idusuario }}</td>
+      <td>{{ leiloeiro.usuario }}</td>
+      <td>{{ leiloeiro.leiloes }}</td>
+      <td>
+        <a [routerLink]="['/usuario/editar/', usr.idUsuario]">Editar</a> |
+        <a [routerLink]="" (click)="deletar(usr.idUsuario)">Deletar</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

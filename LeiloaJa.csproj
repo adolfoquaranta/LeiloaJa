@@ -31,6 +31,23 @@
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20190615225345_InclusaoLeilaoELeiloeiro.cs" />
+    <Compile Remove="Data\Migrations\20190615225345_InclusaoLeilaoELeiloeiro.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190616175945_AlteracaodeTipoDeCamposLeilao.cs" />
+    <Compile Remove="Data\Migrations\20190616175945_AlteracaodeTipoDeCamposLeilao.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190616180924_AlteracaodeDeCamposLeilao.cs" />
+    <Compile Remove="Data\Migrations\20190616180924_AlteracaodeDeCamposLeilao.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190616182102_InclusaoLeilaoELeiloeiro.cs" />
+    <Compile Remove="Data\Migrations\20190616182102_InclusaoLeilaoELeiloeiro.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190616182523_InclusaoLeilaoELeiloeiro.cs" />
+    <Compile Remove="Data\Migrations\20190616182523_InclusaoLeilaoELeiloeiro.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190616182920_InclusaoLeilaoELeiloeiro.cs" />
+    <Compile Remove="Data\Migrations\20190616182920_InclusaoLeilaoELeiloeiro.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ClientApp\src\assets\images\" />
+  </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->

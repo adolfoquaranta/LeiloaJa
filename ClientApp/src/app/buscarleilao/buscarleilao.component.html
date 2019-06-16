@@ -1,0 +1,34 @@
+<h1>Lista de Leilões</h1>
+
+<p *ngIf="!listaLeiloes"><em>Carregando...</em></p>
+
+<p>
+    <a [routerLink]="['/add-leilao']">Novo Leilão</a>
+</p>
+
+<table class='table' *ngIf="listaLeiloes">
+    <thead>
+        <tr>
+            <th>Id Usuário</th>
+            <th>Nome</th>
+            <th>Valor Inicial</th>
+            <th>Condição do Item</th>
+            <th>Data de Abertura</th>
+            <th>Data de Finalizacao</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let leilao of listaLeiloes">
+            <td>{{ leilao.idLeilao }}</td>
+            <td>{{ leilao.nome }}</td>
+            <td>{{ leilao.valorInicial }}</td>
+            <td>{{ leilao.indCondicaoUso }}</td>
+            <td>{{ leilao.dataAbertura }}</td>
+            <td>{{ leilao.dataFinalizacao }}</td>
+            <td>
+                <a [routerLink]="['add-leilao/:idLeilao', leilao.idLeilao]">Editar</a> |
+                <a [routerLink]="" (click)="deletar(leilao.idLeilao)">Deletar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
