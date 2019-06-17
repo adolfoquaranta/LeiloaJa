@@ -46,7 +46,8 @@ namespace LeiloaJa.Controllers
         {
             try
             {
-                return _ctx.Leiloes.Find(idLeilao);
+                Leilao leilao = _ctx.Leiloes.Find(idLeilao);
+                return leilao;
             }
             catch
             {

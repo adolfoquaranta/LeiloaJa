@@ -136,12 +136,13 @@ namespace LeiloaJa.Data.Migrations
 
                     b.Property<DateTime>("DataDeAbertura");
 
-                    b.Property<DateTime?>("DataDeFinalizacao");
+                    b.Property<DateTime>("DataDeFinalizacao");
 
                     b.Property<bool>("IndCondicaoUso")
                         .HasColumnType("Boolean");
 
-                    b.Property<string>("Nome");
+                    b.Property<string>("Nome")
+                        .IsRequired();
 
                     b.Property<decimal>("ValorInicial");
 
@@ -155,7 +156,8 @@ namespace LeiloaJa.Data.Migrations
                     b.Property<int>("IdLeiloeiro")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Nome");
+                    b.Property<string>("Nome")
+                        .IsRequired();
 
                     b.HasKey("IdLeiloeiro");
 

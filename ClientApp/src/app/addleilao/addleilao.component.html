@@ -12,40 +12,43 @@
         </span>
     </div>
     <div class="form-group row">
-        <label class=" control-label col-md-12" for="valorinicial">Valor Inicial</label>
+        <label class=" control-label col-md-12" for="valorInicial">Valor Inicial</label>
         <div class="col-md-4">
-            <input class="form-control" type="number" formControlName="valorinicial">
+            <input class="form-control" type="number" formControlName="valorInicial">
         </div>
-        <span class="text-danger" *ngIf="valorinicial.invalid && formDir.submitted">
+        <span class="text-danger" *ngIf="valorInicial.invalid && formDir.submitted">
             Preecha o Valor Inicial.
         </span>
     </div>
     <div class="form-group row">
-        <label class=" control-label col-md-4" for="indcondicaouso">Usado?</label>
+        <label class=" control-label col-md-4" for="indCondicaoUso">Usado?</label>
         <div class="col-md-4">
-            <input type="radio" [value]="true" formControlName="indcondicaouso"><span>Sim</span>
+            <input type="radio" [value]="true" formControlName="indCondicaoUso"><span>Sim</span>
         </div>
         <div class="col-md-4">
-            <input type="radio" [value]="false" formControlName="indcondicaouso"><span>Não</span>
+            <input type="radio" [value]="false" formControlName="indCondicaoUso"><span>Não</span>
         </div>
-        <span class="text-danger" *ngIf="indcondicaouso.invalid && formDir.submitted">
+        <span class="text-danger" *ngIf="indCondicaoUso.invalid && formDir.submitted">
             Informe se o item é usado ou não.
         </span>
     </div>
     <div class="form-group row">
-        <label class=" control-label col-md-12" for="dataabertura">Data Abertura</label>
+        <label class=" control-label col-md-12" for="dataDeAbertura">Data Abertura</label>
         <div class="col-md-4">
-            <input class="form-control" type="date" formControlName="dataabertura">
+            <input class="form-control" type="datetime-local" formControlName="dataDeAbertura">
         </div>
-        <span class="text-danger" *ngIf="dataabertura.invalid && formDir.submitted">
-            Preecha o a data de abertura.
+        <span class="text-danger" *ngIf="dataDeAbertura.invalid && formDir.submitted">
+            Preecha a data de abertura.
         </span>
     </div>
     <div class="form-group row">
-        <label class=" control-label col-md-12" for="datafinalizacao">Data Finalização</label>
+        <label class=" control-label col-md-12" for="dataDeFinalizacao">Data Finalização</label>
         <div class="col-md-4">
-            <input class="form-control" type="date" formControlName="datafinalizacao">
+          <input class="form-control" type="datetime-local" formControlName="dataDeFinalizacao">
         </div>
+        <span class="text-danger" *ngIf="dataDeFinalizacao.invalid && formDir.submitted">
+          Preecha a data de finalizacao.
+        </span>
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-default">Salvar</button>

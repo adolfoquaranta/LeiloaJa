@@ -41,10 +41,10 @@ import { AuthorizeInterceptor } from 'src/api-authorization/authorize.intercepto
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthorizeGuard] },
       { path: 'buscar-leilao', component: BuscarLeilaoComponent, canActivate: [AuthorizeGuard] },
-      { path: 'add-leilao', component: AddLeilaoComponent, canActivate: [AuthorizeGuard] }      
+      { path: 'add-leilao/:idLeilao', component: AddLeilaoComponent, canActivate: [AuthorizeGuard] }   
     ])
   ],
-  providers:[
+  providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true }
   ], 
   bootstrap: [AppComponent]

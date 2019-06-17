@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
@@ -44,6 +44,10 @@
     <Compile Remove="Data\Migrations\20190616182523_InclusaoLeilaoELeiloeiro.Designer.cs" />
     <Compile Remove="Data\Migrations\20190616182920_InclusaoLeilaoELeiloeiro.cs" />
     <Compile Remove="Data\Migrations\20190616182920_InclusaoLeilaoELeiloeiro.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190616193600_InclusaoLeilaoELeiloeiro.cs" />
+    <Compile Remove="Data\Migrations\20190616193600_InclusaoLeilaoELeiloeiro.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190617052120_InclusaoLeilaoELeiloeiro.cs" />
+    <Compile Remove="Data\Migrations\20190617052120_InclusaoLeilaoELeiloeiro.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ClientApp\src\assets\images\" />

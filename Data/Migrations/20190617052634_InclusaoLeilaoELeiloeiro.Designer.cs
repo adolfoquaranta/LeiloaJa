@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LeiloaJa.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190616193600_InclusaoLeilaoELeiloeiro")]
+    [Migration("20190617052634_InclusaoLeilaoELeiloeiro")]
     partial class InclusaoLeilaoELeiloeiro
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -138,12 +138,13 @@ namespace LeiloaJa.Data.Migrations
 
                     b.Property<DateTime>("DataDeAbertura");
 
-                    b.Property<DateTime?>("DataDeFinalizacao");
+                    b.Property<DateTime>("DataDeFinalizacao");
 
                     b.Property<bool>("IndCondicaoUso")
                         .HasColumnType("Boolean");
 
-                    b.Property<string>("Nome");
+                    b.Property<string>("Nome")
+                        .IsRequired();
 
                     b.Property<decimal>("ValorInicial");
 
@@ -157,7 +158,8 @@ namespace LeiloaJa.Data.Migrations
                     b.Property<int>("IdLeiloeiro")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Nome");
+                    b.Property<string>("Nome")
+                        .IsRequired();
 
                     b.HasKey("IdLeiloeiro");
 

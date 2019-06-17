@@ -1,7 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-
 @Component({
     selector: 'app-buscar-leilao',
     templateUrl: './buscarleilao.component.html'
@@ -40,7 +39,6 @@ interface LeilaoData {
     nome: string;
     valorInicial: number;
     indCondicaoUso: boolean;
-    idUsuarioResponsavel: number;
-    dataAbertura: string;
-    dataFinalizacao: string;
+    dataDeAbertura: string;
+    dataDeFinalizacao: string;
 }

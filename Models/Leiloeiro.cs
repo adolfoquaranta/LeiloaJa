@@ -7,6 +7,7 @@ namespace LeiloaJa.Models
     {
         [Key]
         public int IdLeiloeiro { get; set; }
+        [Required]
         public string Nome { get; set; }
 
         //public string IdUsuario { get; set; }

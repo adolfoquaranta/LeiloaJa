@@ -13,7 +13,7 @@ namespace LeiloaJa.Data.Migrations
                 {
                     IdLeiloeiro = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Nome = table.Column<string>(nullable: true)
+                    Nome = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -26,11 +26,11 @@ namespace LeiloaJa.Data.Migrations
                 {
                     IdLeilao = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Nome = table.Column<string>(nullable: true),
+                    Nome = table.Column<string>(nullable: false),
                     ValorInicial = table.Column<decimal>(nullable: false),
                     IndCondicaoUso = table.Column<bool>(type: "Boolean", nullable: false),
                     DataDeAbertura = table.Column<DateTime>(nullable: false),
-                    DataDeFinalizacao = table.Column<DateTime>(nullable: true)
+                    DataDeFinalizacao = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
