@@ -1,10 +1,6 @@
-﻿using IdentityServer4.EntityFramework.Options;
-using LeiloaJa.Models;
-using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
+﻿using LeiloaJa.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.Options;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
