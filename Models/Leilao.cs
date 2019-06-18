@@ -15,6 +15,13 @@ namespace LeiloaJa.Models
         public Boolean IndCondicaoUso { get; set; }
         public DateTime DataDeAbertura { get; set; }
         public DateTime DataDeFinalizacao { get; set; }
+        [NotMapped]
+        public Boolean IndFinalizado {
+            get
+            {
+                return DataDeFinalizacao <= DateTime.Now;
+            }
+        }
 
         //public int IdLeiloeiroResponsavel { get; set; }
         //public virtual Leiloeiro LeiloeiroResponsavel { get; set; }

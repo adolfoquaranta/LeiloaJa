@@ -1,7 +1,8 @@
 import { Component, Inject } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { Router, ActivatedRoute, Route } from '@angular/router';
-import { LeiloeiroServico } from '../Servicos/leiloeiroservico.servico';
+import { LeiloeiroServico } from '../../Servicos/leiloeiroservico.servico';
+
 
 @Component({
     templateUrl: './buscarleiloeiro.component.html'
@@ -10,7 +11,8 @@ import { LeiloeiroServico } from '../Servicos/leiloeiroservico.servico';
 export class BuscarleiloeiroComponent {
     public listaleiloeiros: leiloeiroData[];
 
-  constructor(public http: Http, private _router: Router, private _leiloeiroServico: LeiloeiroServico) {
+  constructor(public http: Http, private _router: Router,
+    private _leiloeiroServico: LeiloeiroServico) {
         this.obterleiloeiros();
     }
 

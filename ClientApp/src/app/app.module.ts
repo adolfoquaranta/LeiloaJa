@@ -8,15 +8,17 @@ import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { CounterComponent } from './components/counter/counter.component';
+import { FetchDataComponent } from './components/fetch-data/fetch-data.component';
 
-import { BuscarLeilaoComponent } from './buscarleilao/buscarleilao.component';
-import { AddLeilaoComponent } from './addleilao/addleilao.component';
+import { BuscarLeilaoComponent } from './components/buscarleilao/buscarleilao.component';
+import { AddLeilaoComponent } from './components/addleilao/addleilao.component';
 
 import { ApiAuthorizationModule } from 'src/api-authorization/api-authorization.module';
 import { AuthorizeGuard } from 'src/api-authorization/authorize.guard';
 import { AuthorizeInterceptor } from 'src/api-authorization/authorize.interceptor';
+import { IndicadorSimNaoBooleanPipe } from './pipes/custompipes.component';
+import { VerleilaoComponent } from './components/verleilao/verleilao.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +29,11 @@ import { AuthorizeInterceptor } from 'src/api-authorization/authorize.intercepto
     CounterComponent,
     FetchDataComponent,
 
+    IndicadorSimNaoBooleanPipe,
+
     BuscarLeilaoComponent,
-    AddLeilaoComponent
+    AddLeilaoComponent,
+    VerleilaoComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -41,7 +46,8 @@ import { AuthorizeInterceptor } from 'src/api-authorization/authorize.intercepto
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthorizeGuard] },
       { path: 'buscar-leilao', component: BuscarLeilaoComponent, canActivate: [AuthorizeGuard] },
-      { path: 'add-leilao/:idLeilao', component: AddLeilaoComponent, canActivate: [AuthorizeGuard] }   
+      { path: 'add-leilao/:idLeilao', component: AddLeilaoComponent, canActivate: [AuthorizeGuard] },
+      { path: 'ver-leilao/:idLeilao', component: VerleilaoComponent, canActivate: [AuthorizeGuard] }
     ])
   ],
   providers: [

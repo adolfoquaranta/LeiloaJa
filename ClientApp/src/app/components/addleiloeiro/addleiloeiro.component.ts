@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Headers } from '@angular/http';
-import { NgForm, FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { Router, ActivatedRoute } from '@angular/router';
-import { BuscarleiloeiroComponent } from '../buscarleiloeiro/buscarleiloeiro.component';
-import { LeiloeiroServico } from '../../app/Servicos/leiloeiroservico.servico';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { LeiloeiroServico } from '../../Servicos/leiloeiroservico.servico';
 
 @Component({
     templateUrl: './addleiloeiro.component.html'
@@ -15,8 +13,8 @@ export class AddLeiloeiroComponent implements OnInit {
     idLeiloeiro: number;
     messagemErro: any;
 
-    constructor(private _fb: FormBuilder, private _avRoute: ActivatedRoute,
-        private _leiloeiroServico: LeiloeiroServico, private _router: Router) {
+  constructor(private _fb: FormBuilder, private _avRoute: ActivatedRoute,
+    private _router: Router, private _leiloeiroServico: LeiloeiroServico) {
         if (this._avRoute.snapshot.params["id"]) {
             this.idLeiloeiro = this._avRoute.snapshot.params["id"];
         }

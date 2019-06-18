@@ -1,0 +1,22 @@
+  <div class="card" style="width: 18rem;">
+    <img src="./../../assets/images/item.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ leilao.nome }}</h5>
+      <p></p>
+      <p>{{ leilao.idLeilao }}</p>
+      <p></p>
+      <p>{{ leilao.valorInicial | currency:"BRL":"symbol" }}</p>
+      <p></p>
+      <p>{{ leilao.indCondicaoUso | indicadorSimNao }}</p>
+      <p></p>
+      <p>{{ leilao.dataDeAbertura | date : 'dd/MM/yyyy' }}</p>
+      <p></p>
+      <p>{{ leilao.dataDeFinalizacao | date : 'dd/MM/yyyy' }}</p>
+      <p></p>
+      <p>{{ leilao.indFinalizado | indicadorSimNao }}</p>
+    </div>
+  </div>
+
+
+
+

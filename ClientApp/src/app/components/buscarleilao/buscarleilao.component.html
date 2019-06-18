@@ -1,0 +1,32 @@
+<h1>Lista de Leilões</h1>
+
+<p *ngIf="!listaLeiloes"><em>Carregando...</em></p>
+
+<p>
+    <a [routerLink]="['/add-leilao', 0]">Novo Leilão</a>
+</p>
+
+<table class='table table-hover' *ngIf="listaLeiloes">
+    <thead class="thead-dark">
+      <tr>
+        <th>Nome</th>
+        <th>Valor Inicial</th>
+        <th>Item Usado?</th>
+        <th>Leilao Finalizado?</th>
+        <th>Opcões</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let leilao of listaLeiloes">
+        <td>{{ leilao.nome }}</td>
+        <td>{{ leilao.valorInicial | currency:"BRL":"symbol" }}</td>
+        <td>{{ leilao.indCondicaoUso | indicadorSimNao }}</td>
+        <td>{{ leilao.indFinalizado | indicadorSimNao }}</td>
+        <td>
+          <a [routerLink]="['/ver-leilao', leilao.idLeilao]">Detalhes | </a>
+          <a [routerLink]="['/add-leilao', leilao.idLeilao]">Editar | </a>
+          <a [routerLink]="" (click)="deletar(leilao.idLeilao)">Remover </a>
+        </td>
+      </tr>
+    </tbody>
+</table>

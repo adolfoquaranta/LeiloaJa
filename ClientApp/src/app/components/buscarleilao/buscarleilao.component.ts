@@ -41,4 +41,5 @@ interface LeilaoData {
     indCondicaoUso: boolean;
     dataDeAbertura: string;
     dataDeFinalizacao: string;
+    indFinalizado: boolean;
 }
